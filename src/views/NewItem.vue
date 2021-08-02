@@ -1,5 +1,6 @@
 <template>
   <ion-page>
+
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
@@ -8,7 +9,24 @@
         <ion-title>New Item</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content></ion-content>
+
+    <ion-content>
+      <form action="" class="padding">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Title</ion-label>
+          <ion-input placeholder="placeholder"></ion-input>
+        </ion-item>
+          <ion-item>
+            <ion-label position="floating">Description</ion-label>
+          <ion-textarea rows="5" placeholder="placeholder"></ion-textarea>
+        </ion-item>
+        </ion-list>
+
+        <ion-button type="submit" expand="block">Save</ion-button>
+      </form>
+    </ion-content>
+
   </ion-page>
 </template>
 
@@ -20,7 +38,10 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonToolbar
+  IonToolbar,
+  IonInput,
+  IonLabel,
+  // IonCard
 } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
@@ -33,7 +54,10 @@ export default defineComponent({
     IonHeader,
     IonPage,
     IonTitle,
-    IonToolbar
+    IonToolbar,
+    IonInput,
+    IonLabel,
+    // IonCard
   }
 });
 </script>
